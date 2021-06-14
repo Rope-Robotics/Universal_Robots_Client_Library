@@ -8,6 +8,8 @@ if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RelWithDebInfo)
 endif()
 
+find_package(catkin)
+
 find_package(Boost REQUIRED)
 
 
@@ -17,6 +19,8 @@ find_package(Boost REQUIRED)
 include(DefineCXX11CompilerFlag)
 DEFINE_CXX_11_COMPILER_FLAG(CXX11_FLAG)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic")
+
+catkin_package()
 
 add_library(urcl SHARED
     src/comm/tcp_socket.cpp
