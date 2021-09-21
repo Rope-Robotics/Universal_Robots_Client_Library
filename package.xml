@@ -20,6 +20,7 @@
   <url type="repository">https://github.com/UniversalRobots/Universal_Robots_Client_Library</url>
 
   <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>boost</build_depend>
   <depend>libconsole-bridge-dev</depend>
